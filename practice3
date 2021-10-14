@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    float  m, ave=0,s=0;
+    int  n = 0, t1 = 0;
+    printf("请输入若干学生成绩，以负数结束:\n");
+    do {
+        scanf("%f",&m);
+        if (m < 0)break;
+        if (m >= 80 && m <= 89)n++;
+        s += m;
+        t1++;
+    } while (1);
+    if (t1 == 0)
+        ave = 0;
+    else ave = s * 1.0 / t1;
+    printf("ave=%.2f,n=%d\n",ave,n);
+    return 0;
+}
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int  m,n, a,s=0;
+    printf("请输入一个数字a和位数n:\n");
+    
+        scanf("%d%d",&m, &n);
+        s = m;
+        for (a = 1; a < n; a++)
+        {
+            m = m * 10 + 3;
+            s += m;
+        }
+
+        printf("s=%d\n",s);
+    return 0;
+}
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    float  m, a,s;
+    int  n;
+    printf("请输入n的值:");
+    
+        scanf("%d",&n);
+        s = 0;
+        m = 0;
+        for (a = 1; a <= n; a++)
+        {
+            m = m + a;
+            s += 1.0 / m;
+        }
+
+        printf("s=%f\n",s);
+    return 0;
+}
